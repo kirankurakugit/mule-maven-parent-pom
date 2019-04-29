@@ -1,2 +1,2 @@
 # mule-maven-parent-pom
-Parent Pom example for Mule Projectstesting
+Parent Pom example for Mule Projectstesting project
