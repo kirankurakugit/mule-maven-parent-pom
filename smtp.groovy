@@ -1,3 +1,5 @@
+print("Loaded class smtp.groovy")
+
 import javax.mail.*
 import javax.mail.internet.*
 
@@ -8,7 +10,7 @@ RECIPIENT_EMAIL = "kirantesting1984@gmail.com"
 date_time = new Date().format("yyyy-MM-dd hh:mm")
 props = new Properties()
 
-private void runScript() {
+string runScript() {
    // props.put("mail.host", MAILER_HOST);
     //props.put("mail.smtp.user", email)
 	props.put("mail.smtp.host", host)
@@ -25,7 +27,7 @@ private void runScript() {
     message.setSubject("A Test email ${date_time}")
     message.setText("This is a sample email message!")
 
-    Transport.send(message)
+   retunr Transport.send(message)
 }
 
-runScript()
+return this
