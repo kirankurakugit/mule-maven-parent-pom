@@ -31,5 +31,5 @@ def private void runScript()  {
 }
 
 //return this
-runscript()
+runScript()
 
