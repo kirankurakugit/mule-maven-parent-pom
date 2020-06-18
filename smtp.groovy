@@ -20,7 +20,7 @@ private void runScript() {
     session.setDebug(true);
 
     MimeMessage message = new MimeMessage(Session.getDefaultInstance(props))
-    message.setFrom(new InternetAddress(addresser))
+    message.setFrom(new InternetAddress("kiran.kurakula@cloudvisory.com"))
     message.setRecipient(Message.RecipientType.TO, new InternetAddress(RECIPIENT_EMAIL))
     message.setSubject("A Test email ${date_time}")
     message.setText("This is a sample email message!")
