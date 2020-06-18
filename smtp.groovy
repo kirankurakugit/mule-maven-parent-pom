@@ -14,8 +14,8 @@ private void runScript() {
     Session session = Session.getDefaultInstance(new Properties())
 
     MimeMessage message = new MimeMessage(session)
-    message.setFrom("no.reply@example.org")
-    message.setRecipient(Message.RecipientType.TO, new InternetAddress("email@example.org"))
+    message.setFrom("kiran.kurakula@cloudvisory.com")
+    message.setRecipient(Message.RecipientType.TO, new InternetAddress("kiran.kurakula@cloudvisory.com"))
     message.setSubject("Important message!")
     message.setText("Here is an important email message!")
 
