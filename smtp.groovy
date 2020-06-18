@@ -1,32 +1,31 @@
-#!/usr/bin/env groovy
-import javax.mail.Message
-import javax.mail.Session
-import javax.mail.Transport
-import javax.mail.internet.InternetAddress
-import javax.mail.internet.MimeMessage
+import javax.mail.*
+import javax.mail.internet.*
 
-MAILER_HOST = "smtp.office365.com"
-MAILER_USER = "kiran.kurakula@cloudvisory.com"
-MAILER_PASS = 'Ni$hal12'
-MAILER_PORT = 587
+MAILER_HOST = "smtp.office365.com"  // "smtp-relay.gmail.com"
+email="kiran.kurakula@cloudvisory.com"
+port=587
+RECIPIENT_EMAIL = "kiran.kurakula@cloudvisory.com"
+date_time = new Date().format("yyyy-MM-dd hh:mm")
+props = new Properties()
 
 private void runScript() {
-    Session session = Session.getDefaultInstance(new Properties())
+    props.put("mail.host", MAILER_HOST);
+    //props.put("mail.smtp.user", email)
+	props.put("mail.smtp.host", host)
+	props.put("mail.smtp.port", port)
+	props.put("mail.smtp.starttls.enable","true")
+	props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory")
+	props.put("mail.smtp.ssl.trust", host) 
+    Session session = Session.getDefaultInstance(props)
+    session.setDebug(true);
 
-    MimeMessage message = new MimeMessage(session)
-    //message.setFrom('kiran.kurakula@cloudvisory.com')
-    message.setRecipient(Message.RecipientType.TO, new InternetAddress("kiran.kurakula@cloudvisory.com"))
-    message.setSubject("Important message!")
-    message.setText("Here is an important email message!")
+    MimeMessage message = new MimeMessage(Session.getDefaultInstance(props))
+    message.setFrom(new InternetAddress(addresser))
+    message.setRecipient(Message.RecipientType.TO, new InternetAddress(RECIPIENT_EMAIL))
+    message.setSubject("A Test email ${date_time}")
+    message.setText("This is a sample email message!")
 
-    Transport transport = session.getTransport("smtp")
-    transport.connect(MAILER_HOST, MAILER_PORT, MAILER_USER, MAILER_PASS)
-    transport.sendMessage(message, message.getAllRecipients())
-    transport.close()
+    Transport.send(message)
 }
 
 runScript()
-
-
-
-
