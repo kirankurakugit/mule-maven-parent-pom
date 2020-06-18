@@ -27,8 +27,9 @@ def private void runScript()  {
     message.setSubject("A Test email ${date_time}")
     message.setText("This is a sample email message!")
 
-    Transport.send(message)
+   return  Transport.send(message)
 }
 
-return this
+//return this
+runscript()
 
