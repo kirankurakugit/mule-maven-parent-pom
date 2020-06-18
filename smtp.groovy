@@ -4,7 +4,7 @@ import javax.mail.internet.*
 host = "smtp.gmail.com"  // "smtp-relay.gmail.com"
 email="kirantesting1984@gmail.com"
 port=465
-RECIPIENT_EMAIL = "kiran.kurakula@cloudvisory.com"
+RECIPIENT_EMAIL = "kirantesting1984@gmail.com"
 date_time = new Date().format("yyyy-MM-dd hh:mm")
 props = new Properties()
 
