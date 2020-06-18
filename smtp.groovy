@@ -1,7 +1,7 @@
 import javax.mail.*
 import javax.mail.internet.*
 
-MAILER_HOST = "smtp.office365.com"  // "smtp-relay.gmail.com"
+host = "smtp.office365.com"  // "smtp-relay.gmail.com"
 email="kiran.kurakula@cloudvisory.com"
 port=587
 RECIPIENT_EMAIL = "kiran.kurakula@cloudvisory.com"
@@ -9,7 +9,7 @@ date_time = new Date().format("yyyy-MM-dd hh:mm")
 props = new Properties()
 
 private void runScript() {
-    props.put("mail.host", MAILER_HOST);
+   // props.put("mail.host", MAILER_HOST);
     //props.put("mail.smtp.user", email)
 	props.put("mail.smtp.host", host)
 	props.put("mail.smtp.port", port)
