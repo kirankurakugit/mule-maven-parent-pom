@@ -1,9 +1,9 @@
 import javax.mail.*
 import javax.mail.internet.*
 
-host = "smtp.office365.com"  // "smtp-relay.gmail.com"
-email="kiran.kurakula@cloudvisory.com"
-port=587
+host = "smtp.gmail.com"  // "smtp-relay.gmail.com"
+email="kirantesting1984@gmail.com"
+port=465
 RECIPIENT_EMAIL = "kiran.kurakula@cloudvisory.com"
 date_time = new Date().format("yyyy-MM-dd hh:mm")
 props = new Properties()
@@ -20,7 +20,7 @@ private void runScript() {
     session.setDebug(true);
 
     MimeMessage message = new MimeMessage(Session.getDefaultInstance(props))
-    message.setFrom(new InternetAddress("kiran.kurakula@cloudvisory.com"))
+    message.setFrom(new InternetAddress("kirantesting1984@gmail.com"))
     message.setRecipient(Message.RecipientType.TO, new InternetAddress(RECIPIENT_EMAIL))
     message.setSubject("A Test email ${date_time}")
     message.setText("This is a sample email message!")
