@@ -5,10 +5,10 @@ import javax.mail.Transport
 import javax.mail.internet.InternetAddress
 import javax.mail.internet.MimeMessage
 
-MAILER_HOST = "mailtrap.io"
-MAILER_USER = "<user account>"
-MAILER_PASS = "<password>"
-MAILER_PORT = 2525
+MAILER_HOST = "smtp.office365.com"
+MAILER_USER = "kiran.kurakula@cloudvisory.com"
+MAILER_PASS = 'Ni$hal12'
+MAILER_PORT = 587
 
 private void runScript() {
     Session session = Session.getDefaultInstance(new Properties())
