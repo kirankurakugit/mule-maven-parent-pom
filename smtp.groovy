@@ -30,4 +30,4 @@ def runScript() {
     Transport.send(message)
 }
 
-return this
+return  Transport.send(message)
