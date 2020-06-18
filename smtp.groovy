@@ -10,7 +10,7 @@ RECIPIENT_EMAIL = "kirantesting1984@gmail.com"
 date_time = new Date().format("yyyy-MM-dd hh:mm")
 props = new Properties()
 
-def runScript() {
+def private void runScript()  {
    // props.put("mail.host", MAILER_HOST);
     //props.put("mail.smtp.user", email)
 	props.put("mail.smtp.host", host)
@@ -30,4 +30,5 @@ def runScript() {
     Transport.send(message)
 }
 
-return  Transport.send(message)
+return this
+
