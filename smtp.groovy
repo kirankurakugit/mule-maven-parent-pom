@@ -27,7 +27,7 @@ def runScript() {
     message.setSubject("A Test email ${date_time}")
     message.setText("This is a sample email message!")
 
-   retunr Transport.send(message)
+    Transport.send(message)
 }
 
 return this
