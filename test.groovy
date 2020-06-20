@@ -1,4 +1,10 @@
 
-def call(String name = 'human') {
-  echo "Hello, ${name}."
+def example1() {
+  println 'Hello from example1'
 }
+
+def example2() {
+  println 'Hello from example2'
+}
+
+return this
