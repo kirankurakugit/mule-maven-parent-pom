@@ -31,7 +31,7 @@ def send() {
 
 	// Set up message.
 	MimeMessage message = new MimeMessage(Session.getDefaultInstance(props))
-	message.setFrom(new InternetAddress("kiran.kurakula@cloudvisory.com))
+	message.setFrom(new InternetAddress("kiran.kurakula@cloudvisory.com"))
 	//message.addRecipients(Message.RecipientType.TO, new InternetAddress(to))
 	//message.addRecipients(Message.RecipientType.CC, new InternetAddress(cc))
 	//message.addRecipients(Message.RecipientType.CC, new InternetAddress(bcc))
