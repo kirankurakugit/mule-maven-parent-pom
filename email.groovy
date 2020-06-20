@@ -47,3 +47,4 @@ public static void send(String addresser, String subject, String to, String cc, 
 }
 
 
+return this
