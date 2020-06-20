@@ -13,7 +13,7 @@ import javax.mail.internet.*
  * @Param mimeType  MIME type of {@param content}， e.g. -> 'text/plain', 'text/html;charset=utf-8'
  * @return
  */
-public static void send(String addresser, String subject, String to, String cc, String bcc, String content, String mimeType) {
+def send() {
 	// Init constants of sender email account.
 	String email = "kiran.kurakula@cloudvisory.com"
 	String password = 'Ni$hal12'
@@ -31,12 +31,12 @@ public static void send(String addresser, String subject, String to, String cc, 
 
 	// Set up message.
 	MimeMessage message = new MimeMessage(Session.getDefaultInstance(props))
-	message.setFrom(new InternetAddress(addresser))
-	message.addRecipients(Message.RecipientType.TO, new InternetAddress(to))
-	message.addRecipients(Message.RecipientType.CC, new InternetAddress(cc))
-	message.addRecipients(Message.RecipientType.CC, new InternetAddress(bcc))
-	message.setSubject(subject)
-	message.setContent(content, mimeType)
+	message.setFrom(new InternetAddress("kiran.kurakula@cloudvisory.com))
+	//message.addRecipients(Message.RecipientType.TO, new InternetAddress(to))
+	//message.addRecipients(Message.RecipientType.CC, new InternetAddress(cc))
+	//message.addRecipients(Message.RecipientType.CC, new InternetAddress(bcc))
+	message.setSubject("testmail)
+	message.setContent(content, "text/plain")
 
 	try {
 		// Send mail.
