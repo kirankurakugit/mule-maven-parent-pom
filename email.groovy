@@ -35,7 +35,7 @@ def send() {
 	//message.addRecipients(Message.RecipientType.TO, new InternetAddress(to))
 	//message.addRecipients(Message.RecipientType.CC, new InternetAddress(cc))
 	//message.addRecipients(Message.RecipientType.CC, new InternetAddress(bcc))
-	message.setSubject("testmail)
+	message.setSubject("testmail")
 	message.setContent(content, "text/plain")
 
 	try {
